@@ -1,0 +1,26 @@
+{
+  "name": "mfjs-zipper-sample",
+  "version": "1.0.0",
+  "description": "zipper from any traversal",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browser": "browserify -t babelify -t @mfjs/compiler/monadify zipper.js -o index.js"
+  },
+  "keywords": [
+    "zipper",
+    "continuations",
+    "monad"
+  ],
+  "author": "Vitaliy Akimov <vitaliy.akimov@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@mfjs/compiler": "~1.1.0",
+    "babel-preset-es2015-mfjs": "^1.0.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1"
+  },
+  "dependencies": {
+    "@mfjs/cc": "~1.1.0",
+    "@mfjs/core": "~1.1.0"
+  }
+}
