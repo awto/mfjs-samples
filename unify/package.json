@@ -1,0 +1,28 @@
+{
+  "name": "unify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browser": "browserify -t babelify -t @mfjs/compiler/monadify unify.js -o index.js",
+    "build": "babel unify.js | mfjsc --dest=index.js",
+    "run": "npm run build && node ./index.js"
+  },
+  "keywords": [
+    "mfjs"
+  ],
+  "author": "Vitaliy Akimov <vitaliy.akimov@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@mfjs/compiler": "^1.1.0",
+    "babel-cli": "^6.9.0",
+    "babel-preset-es2015-mfjs": "^1.0.0",
+    "babelify": "^7.3.0"
+  },
+  "dependencies": {
+    "@mfjs/core": "^1.1.0",
+    "@mfjs/logic": "^1.0.0",
+    "babel-polyfill": "^6.9.0"
+  }
+}
